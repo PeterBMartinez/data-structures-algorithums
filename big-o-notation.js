@@ -25,13 +25,6 @@ Suppose we want to write a function that calculates
 the sum of all numbers from 1 up to (and including) some number n
 **/
 
-function addUpToFirst(n) {
-  let total = 0;
-  for (let i = 1; i <= n; i++) {
-    total += i;
-  }
-  return total;
-}
 /** 
 ANALYSIS
 --------
@@ -39,10 +32,14 @@ ANALYSIS
 - operations total: n
 - Big O: O(n)
 **/
-
-function addUpToSecond(n) {
-  return (n * (n + 1)) / 2;
+function addUpToFirst(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
 }
+
 /** 
 ANALYSIS
 --------
@@ -50,14 +47,10 @@ ANALYSIS
 - operations total: 3
 - Big O complexity: O(1)
 **/
-
-function printAllPairs(n) {
-  for (let i = 1; i < n; i++) {
-    for (let j = 1; j < n; j++) {
-      console.log(i, j);
-    }
-  }
+function addUpToSecond(n) {
+  return (n * (n + 1)) / 2;
 }
+
 /** 
   ANALYSIS
   --------
@@ -65,3 +58,10 @@ function printAllPairs(n) {
   - operations total: n
   - Big O complexity: O(n^2)
 **/
+function printAllPairs(n) {
+  for (let i = 1; i < n; i++) {
+    for (let j = 1; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+}
